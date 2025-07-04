@@ -1,4 +1,5 @@
-# Ejecuta Litd
+# Litd de LND
+## Curso Autocustodia Lighntning Network: Tu Nodo Lightning, Tus Reglas
 
 ![Alt text](/img/autocustodia_ln.webp "Ejecuta Litd")
 
@@ -33,9 +34,9 @@ Las versiones actuales de las listas de verificación y scripts instalan...
 
 Esta configuración está bien testeada en servidores barebone o virtulaes, con al menos este nivel de recursos:
 
-- 2+ Núcleos de CPU
-- 80GB+ de Almacenamiento (nodo podado a 50GB)
-- 2GB+ de RAM
+- 1 vCPU
+- 20GB de Almacenamiento (nodo podado a 2GB)
+- 1GB de RAM
 
 Deberá aumentar estos recursos cuando ejecute un servidor de producción o cuando ejecute un nodo completo.
 
@@ -128,7 +129,7 @@ Al ejecutar un nodo completo en mainnet, el servidor debe tener al menos 800 GB.
 
 Al ejecutar un nodo podado, la siguiente línea debe estar descomentada en el archivo **bitcoin.conf**. Es la opción por defecto del script.
 
-```prune=50000 # Podar a 50GB```
+```prune=2000 # Podar a 2GB```
 
 Ambos scripts también ejecutan comprobaciones para ver lo que se ha hecho a medida que avanzan, por lo que deberían ser seguros para ejecutar varias veces en caso de que alguna ejecución se haya interrumpido.
 
@@ -196,3 +197,6 @@ Para descagar el binario:
 ```sudo ./litd_setup3.sh```
 
 Ahora a desarrollar! 
+
+Autor: Federico Fox, Librería de Satoshi educator. 
+https://github.com/Foxtrot-Zulu

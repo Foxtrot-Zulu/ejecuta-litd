@@ -149,7 +149,7 @@ cat <<EOF > $BITCOIN_CONF
 daemon=1
 
 # Establecer el número de megabytes de RAM a usar, establecer en como el 50% de la memoria disponible
-dbcache=3000
+dbcache=1000
 
 # Añadir visibilidad al mempool y llamadas RPC para la depuración potencial de LND
 debug=mempool
@@ -186,8 +186,8 @@ shrinkdebuglog=1
 # Establecer signet si es necesario
 $( [[ "$NETWORK" == "signet" ]] && echo "signet=1" || echo "#signet=1" )
 
-# Podar la cadena de bloques. Ejemplo de poda a 50GB
-prune=50000
+# Podar la cadena de bloques. Ejemplo de poda a 2GB
+prune=2000
 
 # Activar el índice de búsqueda de transacciones, si el nodo podado está desactivado.
 txindex=0
